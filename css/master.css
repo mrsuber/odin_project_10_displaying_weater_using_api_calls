@@ -6,15 +6,22 @@
     box-sizing: border-box;
 }
 :root{
-    --tenne-tawny: green;
-    --tenne-tawny-dark: #044c04;
+    --tenne-tawny: #0d2655;
+    --tenne-tawny-dark: #051637;
 }
 body{
     font-weight: 300;
     font-size: 1.05rem;
     line-height: 1.6;
     font-family: 'Poppins', sans-serif;
+
+    background: url(../images/weather.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 
 /*  */
 .container{
@@ -22,10 +29,12 @@ body{
 }
 .meal-wrapper{
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 38px auto;
     padding: 2rem;
     background: #fff;
     text-align: center;
+    border-radius: 5px;
+    opacity: 0.85;
 }
 .meal-search{
     margin: 2rem 0;
@@ -92,4 +101,56 @@ body{
     cursor: pointer;
     outline: 0;
     font-size: 1.05rem;
+}
+
+
+/* table decoration */
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin:0;
+  padding:0;
+  width: 100%;
+}
+table tr {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+table th, table td {
+  padding: 10px;
+  text-align: center;
+}
+table th {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+  table thead {
+    display: none;
+  }
+  table tr {
+    border-bottom: 2px solid #ddd;
+    display: block;
+    margin-bottom: 10px;
+  }
+  table td {
+    border-bottom: 1px dotted #ccc;
+    display: block;
+    font-size: 13px;
+    text-align: right;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
 }
